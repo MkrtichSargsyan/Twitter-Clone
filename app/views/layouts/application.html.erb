@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
@@ -19,7 +20,6 @@
       </div>
     <% end %>
     <div class="navbar is-info">
-
       <div class="navbar-brand">
         <%= link_to root_path, class:'navbar-item' do%>
           <h1 class='title is-5'>Twittter</h1>
@@ -30,17 +30,16 @@
           <span></span>
         </div>
       </div>
-
       <div id="navbarExample" class="navbar-menu">
         <div class="navbar-end">
           <div class="field is-grouped">
-            <div class="control">
+            <p class="control">
               <%= link_to 'New Tweeet', new_tweeet_path,class:'button is-info is-inverted' %>
-            </div>
+            </p>
+            <p class="control">Sign Up</p>
           </div>
         </div>
       </div>
-
     </div>
     <%= yield %>
   </body>
